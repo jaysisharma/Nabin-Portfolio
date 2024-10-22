@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Bungee+Shade&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bungee+Shade&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Hamburger Menu Example</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="bg-[#D1D1C1]">
+    <div id="home">
+      <!-- NavBar -->
+      <nav
+        class="flex justify-between items-center md:px-20 md:py-4 px-8 py-4 bg-[#D1D1C1]"
+      >
+        <div class="logo font-bold uppercase text-3xl">
+          <span class="text-orange-600 text-4xl">N</span>ABIN
+        </div>
+        <div
+          class="menu-icon bg-white md:h-20 h-16 w-16 md:w-20 flex items-center justify-center flex-col rounded-full cursor-pointer"
+          id="menuIcon"
+          onclick="toggleMenu()"
+        >
+          <div
+            class="bar bg-gray-800 h-1 md:w-8 w-6 mb-1 transition-all duration-300 ease-in-out"
+          ></div>
+          <div
+            class="bar bg-gray-800 h-1 md:w-8 w-6 mb-1 transition-all duration-300 ease-in-out"
+          ></div>
+          <div
+            class="bar bg-gray-800 h-1 md:w-8 w-6 transition-all duration-300 ease-in-out"
+          ></div>
+        </div>
+      </nav>
+
+      <div class="nav_container bg-[#D8D8D8] h-screen w-screen">
+        <ul class="flex flex-col p-20 gap-8 md:text-[70px] text-96 uppercase font-bold text-gray-800">
+          <li class="active home">
+            <a href="" onclick="setActive(this, 0)" class="a">Home</a>
+          </li>
+          <li><a href="#about" onclick="setActive(this, 1)">About</a></li>
+          <li><a href="#skills" onclick="setActive(this, 2)">Skills</a></li>
+          <li><a href="#experience" onclick="setActive(this, 3)">Experience</a></li>
+          <li><a href="#education" onclick="setActive(this, 4)">Education</a></li>
+          <li><a href="#contact" onclick="setActive(this, 5)">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- NavBar Ends -->
+
+      <div
+        class="marquee w-screen h-10 bg-black text-white text-xl flex items-center gap-3"
+      >
+        <marquee behavior="scroll" direction="left">
+          Expert in Supply Chain & Logistics | Cost Reduction | SLA Performance
+          Improvement | Last-Mile Delivery | Hub Operations | B2B & B2C
+          Logistics Solutions | Vendor & Team Management | Compliance Excellence
+        </marquee>
+      </div>
+
+      <div
+        class="social_icons hidden md:flex absolute bottom-10 flex-col gap-4 text-4xl left-10"
+      >
+        <i
+          class="fa-brands cursor-pointer fa-linkedin hover:text-blue-600 hp"
+        ></i>
+        <i class="fa-brands cursor-pointer fa-facebook hover:text-blue-600"></i>
+        <i class="fa-brands cursor-pointer fa-twitter hover:text-blue-600"></i>
+
+        <i
+          class="fa-brands after_effect cursor-pointer fa-instagram hover:text-red-600"
+        ></i>
+      </div>
+      <div
+        class="hero_section px-4 md:px-8 lg:px-20 py-6 md:py-8 w-full flex flex-col md:flex-row h-auto md:h-[85vh]"
+      >
+        <div class="left w-full md:w-1/2 h-auto flex flex-col justify-center">
+          <h1 class="text-4xl md:text-[96px] bungee hidden md:block orange hello">
+            HELLO
+          </h1>
+          <div
+            class="profile flex flex-col md:flex-row md:justify-around md:mt-14"
+          >
+            <h1 class="text-4xl md:text-[96px] md:block hidden bungee orange im">
+              I'm
+            </h1>
+            <img
+              src="../assets/profile.png"
+              class="mt-4 md:mt-10 rounded-lg md:w-auto md:h-auto photo"
+              alt="Profile Picture"
+            />
+          </div>
+        </div>
+        <div
+          class="right w-full md:w-1/2 h-auto flex flex-col justify-center intro"
+        >
+          <div class="txt text-2xl md:hidden flex gap-3">
+            <h1 class="md:text-[96px] md:bungee">Hello</h1>
+            <h1 class="md:text-[96px] md:bungee">I'm</h1>
+          </div>
+          <h3 class="be-vietnam-pro-bold hidden md:block text-sm md:text-3xl tag">
+            SUPPLY CHAIN & LOGISTICS EXPERT
+          </h3>
+          <h1 class="text-xl md:text-[96px] bungee orange name">NABIN SAH</h1>
+          <p class="text-lg md:text-[30px] mb-4 desc" style="line-height: 2rem">
+            Get customized logistics solutions that make your supply chain more
+            efficient and cost-effective. With experience in improving
+            operations and delivering real results, I’m here to help your
+            business grow. Ready to improve your logistics and boost your
+            success? Let’s work together and take your logistics to the next
+            level.
+          </p>
+
+          <div class="social_icons md:hidden flex gap-4 mb-8 text-4xl left-10">
+            <i
+              class="fa-brands cursor-pointer fa-linkedin hover:text-blue-600 hp"
+            ></i>
+            <i
+              class="fa-brands cursor-pointer fa-facebook hover:text-blue-600"
+            ></i>
+            <i
+              class="fa-brands cursor-pointer fa-twitter hover:text-blue-600"
+            ></i>
+
+            <i
+              class="fa-brands after_effect cursor-pointer fa-instagram hover:text-red-600"
+            ></i>
+          </div>
+          <div class="bg-wrapper">
+            <div class="btn text-2xl md:text-3xl">Hire Me</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="about" class="bg-[#D9D9D9]">
+      <div class="brands w-screen md:h-96 black text-white text-center py-4">
+        <h2 class="font-bold text-5xl italic">Brands I Worked For</h2>
+        <div
+          class="brand_img flex md:flex-row flex-col md:gap-0 gap-8 justify-around items-center mt-10"
+        >
+          <img
+            src="../assets/asd-removebg-preview 1.png"
+            class="cursor-pointer w-64 h-32 brand_img"
+            alt="DTDC Image"
+          />
+          <img
+            src="../assets//image 9.png"
+            class="cursor-pointer w-64 h-32 brand_img"
+            alt="Xpressbees"
+          />
+          <img
+            src="../assets/image 10.png"
+            class="cursor-pointer w-64 h-32 brand_img"
+            alt="Delhivery"
+          />
+          <img
+            src="../assets//image 11.png"
+            class="cursor-pointer w-64 h-32 brand_img"
+            alt="V-Trans"
+          />
+        </div>
+      </div>
+      <div
+        class="about_container md:px-20 px-4 flex flex-col md:flex-row md:gap-16 gap-8 md:mt-32 mt-8 py-10"
+      >
+        <div
+          class="left md:w-1/2 bungee orange md:text-[96px] text-6xl text-center"
+        >
+          <h2 class="about_me">ABOUT ME</h2>
+        </div>
+        <div class="right md:w-1/2 text-2xl">
+          <h2 class="about_content">
+            I am a seasoned professional with extensive experience in supply
+            chain and logistics management, specializing in hub operations,
+            last-mile delivery, and compliance. I have successfully worked with
+            industry leaders like DTDC, Xpressbees, Delhivery, and V-Trans,
+            optimizing operations and driving efficiency. <br /><br />
+            With a focus on cost reduction, improving SLA performance, and
+            streamlining processes, I consistently deliver measurable results in
+            both B2B and B2C environments. My expertise includes vendor
+            management, team coordination, and route planning, ensuring smooth
+            supply chain operations
+            <br />
+            <br />
+            I am committed to innovation and efficiency, helping organizations
+            meet their goals while reducing costs and boosting operational
+            success.
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div id="skills">
+      <div class="skills_container px-5 md:px-20 h-screen flex flex-col gap-8 md:flex-row items-center">
+          <div class="left w-full md:w-1/2 h-auto md:py-0 py-10 bungee orange text-[48px] md:text-[96px] text-center flex items-center justify-center">
+              <h2 class="skill_txt">SKILLS</h2>
+          </div>
+          <div class="right md:px-0 px-8 w-full md:w-1/2 h-auto orange flex items-center">
+              <div class="items flex flex-col gap-8 w-full">
+                  <!-- Cost Management -->
+                  <div class="item1 mb-4">
+                      <h4 class="text-xl md:text-2xl text-black flex justify-between items-center">
+                          Cost Management <p>95%</p>
+                      </h4>
+                      <div class="progress_bar">
+                          <div class="bars" data-percentage="95"></div>
+                      </div>
+                  </div>
+
+                  <!-- Business Expansion -->
+                  <div class="item1 mb-4">
+                      <h4 class="text-xl md:text-2xl text-black flex justify-between items-center">
+                          Business Expansion <p>72%</p>
+                      </h4>
+                      <div class="progress_bar">
+                          <div class="bars" data-percentage="72"></div>
+                      </div>
+                  </div>
+
+                  <!-- P & L Management -->
+                  <div class="item1 mb-4">
+                      <h4 class="text-xl md:text-2xl text-black flex justify-between items-center">
+                          P & L Management <p>85%</p>
+                      </h4>
+                      <div class="progress_bar">
+                          <div class="bars" data-percentage="85"></div>
+                      </div>
+                  </div>
+
+                  <!-- Team Coordination -->
+                  <div class="item1 mb-4">
+                      <h4 class="text-xl md:text-2xl text-black flex justify-between items-center">
+                          Team Coordination <p>90%</p>
+                      </h4>
+                      <div class="progress_bar">
+                          <div class="bars" data-percentage="90"></div>
+                      </div>
+                  </div>
+
+                  <!-- Route Planning -->
+                  <div class="item1 mb-4">
+                      <h4 class="text-xl md:text-2xl text-black flex justify-between items-center">
+                          Route Planning <p>80%</p>
+                      </h4>
+                      <div class="progress_bar">
+                          <div class="bars" data-percentage="80"></div>
+                      </div>
+                  </div>
+
+                  <!-- Vendor Management -->
+                  <div class="item1 mb-4">
+                      <h4 class="text-xl md:text-2xl text-black flex justify-between items-center">
+                          Vendor Management <p>78%</p>
+                      </h4>
+                      <div class="progress_bar">
+                          <div class="bars" data-percentage="78"></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+    <div id="experience" class="bg-[#D9D9D9] pb-24">
+      <div class="experience_container flex md:flex-row flex-col p-8">
+        <div class="left w-2/5 px-16 flex items-center">
+          <h2 class="text-[48px] md:text-[96px] bungee orange">EXPERIENCE</h2>
+        </div>
+        <div class="right h-screen md:px-8 md:mt-0 mt-10 ">
+          <div class="exp_container">
+            <div class="item">
+              <div class="circle"></div>
+              <div class="exp exp1 text-white p-8">
+                <h2 class="text-4xl font-bold">DTDC</h2>
+                <p class="orange text-lg">June 2024 - Present</p>
+                <p class="font-bold text-2xl">BRANCH MANAGER</p>
+                <!-- <div
+                  class="detailp px-4 bg-white text-sm w-24 flex items-center justify-center cursor-pointer h-8 text-center text-black mt-4"
+                >
+                  Detail
+                </div> -->
+              </div>
+            </div>
+            <div class="item">
+              <div class="circle"></div>
+              <div class="exp exp2">
+                <h2 class="text-4xl font-bold">Xpressbees</h2>
+                <p class="orange text-lg">March 2023 - May 2024</p>
+                <p class="font-bold text-2xl">Senior Executive</p>
+                <div
+                  class="detail px-4 bg-white md:hidden text-sm w-24 flex items-center justify-center cursor-pointer h-8 text-center text-black mt-4"
+                >
+                  Detail
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="circle"></div>
+              <div class="exp exp3">
+                <h2 class="text-4xl font-bold">DELHIVERY</h2>
+                <p class="orange text-lg">November 2021 - February 2023</p>
+                <p class="font-bold text-2xl">Senior Executive</p>
+                <div
+                  class="detail px-4 bg-white md:hidden text-sm w-24 flex items-center justify-center cursor-pointer h-8 text-center text-black mt-4"
+                >
+                  Detail
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="circle"></div>
+              <div class="exp exp4">
+                <h2 class="text-4xl font-bold">V-Trans</h2>
+                <p class="orange text-lg">November 2021 - November 2021</p>
+                <p class="font-bold text-2xl">Senior Executive</p>
+                <div
+                  class="detail px-4 bg-white md:hidden text-sm w-24 flex items-center justify-center cursor-pointer h-8 text-center text-black mt-4"
+                >
+                  Detail
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+    <!-- <section id="education">
+      <div class="experience_container flex">
+        <div class="left w-2/5 px-16 flex items-center">
+          <h2 class="text-[96px] bungee orange">EDUCATION</h2>
+        </div>
+        <div class="right h-screen px-8">
+          <div class="exp_container">
+            <div class="item">
+              <div class="circle"></div>
+              <div class="exp flex flex-col gap-3">
+                <h2 class="text-3xl font-bold">
+                  PGDM/MBA-, Logistics, Materials, and Supply Chain Management
+                </h2>
+                <p class="orange text-lg">(2019 - 2021)</p>
+                <p class="font-bold text-xl">
+                  Institute of Advance Management and Research
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="circle"></div>
+              <div class="exp flex flex-col gap-3">
+                <h2 class="text-3xl font-bold mt-8">
+                  Bachelor of Business Administration - BBA, General
+                </h2>
+                <p class="orange text-lg">2015 - 2019</p>
+                <p class="font-bold text-xl">
+                  Sawmi VivekanandSubharti University
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="circle"></div>
+              <div class="exp flex flex-col gap-3 mt-4">
+                <h2 class="text-3xl font-bold">12th, Management</h2>
+                <p class="orange text-lg">2013 - 2015</p>
+                <p class="fsont-bold text-xl">New English</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="circle"></div>
+              <div class="exp flex flex-col gap-3">
+                <h2 class="text-3xl font-bold">10th</h2>
+                <p class="orange text-lg">2012 - 2013</p>
+                <p class="font-bold text-xl">Himali boarding school</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <div id="contact" class="bg-[#f2f2f2]">
+      <div class="contact_container w-screen md:p-20 p-8  flex md:flex-row flex-col">
+        <div class="left md:w-1/2 flex items-start justify-center flex-col">
+          <h2 class="md:text-[72px] text-4xl font-bold orange mb-10">LETS GET IN TOUCH</h2>
+          <img
+            src="../assets/Typing.gif"
+            alt="contact_img"
+            class="md:h-[700px] rounded-3xl shadow-xl"
+          />
+        </div>
+        <div
+          class="right md:w-1/2  flex flex-col md:mt-0 mt-10 text-start justify-center"
+        >
+          <form action="#" method="POST" class="space-y-4 flex flex-col gap-4">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700"
+                >Name</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required  
+                class="mt-4 block w-full p-2 border border-gray-300 text-2xl rounded-md focus:ring focus:ring-blue-200"
+                placeholder="Your Name"
+              />
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700"
+                >Email</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="mt-4 block p-4 border border-gray-300 text-2xl w-full rounded-md focus:ring focus:ring-blue-200"
+                placeholder="Your Email"
+              />
+            </div>
+
+            <div class="mt-10">
+              <label
+                for="message"
+                class="block text-sm font-medium text-gray-700"
+                >Message</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                required
+                rows="4"
+                class="mt-4 block w-full p-2 border border-gray-300 text-2xl rounded-md focus:ring focus:ring-blue-200"
+                placeholder="Your Message"
+              ></textarea>
+            </div>
+
+            <div class="bg-wrapper">
+              <div class="btn text-3xl border shadow-2xl">Submit</div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div> 
+
+    <footer class="p-6 text-center flex justify-center items-center">
+      <p class="text-gray-700 text-center">
+        Copyright &copy; 2024 Nabin Sah. All rights reserved.
+      </p>
+    </footer> 
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" onclick="scrollToTop()">↑</button>
+
+    <!-- GSAP CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+    <script src="./script.js"></script>
+    <script>
+      window.onload = function () {
+        // Scroll to the top when the page loads
+        window.scrollTo(0, 0);
+      };
+
+      const exp2 = document.getElementById("exp2");
+      const exp2_detail = document.getElementById("exp2_detail");
+
+      function toggleMenu() {
+        const menuIcon = document.getElementById("menuIcon");
+        const navContainer = document.querySelector(".nav_container");
+        menuIcon.classList.toggle("active");
+        const bars = menuIcon.getElementsByClassName("bar");
+
+        if (menuIcon.classList.contains("active")) {
+          bars[0].classList.add("transform", "rotate-45", "translate-y-2");
+          bars[1].classList.add("opacity-0");
+          bars[2].classList.add("transform", "-rotate-45", "-translate-y-2");
+
+          gsap.to(navContainer, {
+            top: "0%",
+          });
+
+          navContainer.classList.add("active");
+        } else {
+          bars[0].classList.remove("transform", "rotate-45", "translate-y-2");
+          bars[1].classList.remove("opacity-0");
+          bars[2].classList.remove("transform", "-rotate-45", "-translate-y-2");
+
+          gsap.to(navContainer, {
+            top: "-100%",
+          });
+        }
+      }
+
+      function setActive(link, index) {
+        // Remove active class from all links
+        const listItems = document.querySelectorAll(".nav_container ul li");
+        listItems.forEach((item) => item.classList.remove("active"));
+
+        // Add active class to the clicked link's parent li
+        link.parentElement.classList.add("active");
+
+        // Get the clicked link's text
+        const clickedItemText = link.textContent; // Get the text of the clicked link
+        console.log("Clicked item:", clickedItemText); // Log the clicked item text
+
+        // Scroll to the specific vh position based on the index
+        const scrollPosition = (index + 1) * 100; // 100vh for 1st item, 200vh for 2nd, etc.
+        window.scrollBy({
+          top: window.innerHeight * 2, // Scroll down by the height of the viewport
+          behavior: "smooth", // Optional: smooth scroll
+        });
+
+        toggleMenu(); // Close the menu after selecting a section
+      }
+
+      // Scroll to Top Functionality
+      const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+      window.onscroll = function () {
+        // Show or hide the scroll to top button
+        if (
+          document.body.scrollTop > window.innerHeight / 2 ||
+          document.documentElement.scrollTop > window.innerHeight / 2
+        ) {
+          scrollToTopBtn.classList.add("show"); // Add class to show button
+        } else {
+          scrollToTopBtn.classList.remove("show"); // Remove class to hide button
+        }
+      };
+
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+
+      const expItems = document.querySelectorAll(".exp");
+
+      expItems.forEach((item) => {
+        const detail = item.querySelector(".detail");
+
+        item.addEventListener("mouseenter", () => {
+          detail.classList.remove("hidden");
+        });
+
+        item.addEventListener("mouseleave", () => {
+          detail.classList.add("hidden");
+        });
+      });
+
+
+
+
+    </script>
+  </body>
+</html>

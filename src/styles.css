@@ -1,0 +1,287 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.bungee {
+  font-family: "Bungee Shade", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.be-vietnam-pro-bold {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+#menuIcon{
+  z-index: 100;
+}
+
+.profile_img{
+  max-width: 70%;
+  /* height: 90vh; */
+}
+
+.intro {
+  gap: 2.6rem;
+}
+.name{
+  font-family: "Bungee Shade", sans-serif;
+
+}
+
+
+
+@media (max-width: 768px) {
+  .intro {
+    margin-top: 20px;
+    gap: .5rem;
+  }
+  .name{
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  .exp_container{
+    padding: 10px;
+  }
+}
+
+.nav_container {
+  position: absolute;
+  z-index: 99;
+  top: -100%;
+  transition: top 0.3s ease;
+}
+
+.nav_container.active {
+  top: 0;
+}
+
+.nav_container ul li {
+  position: relative;
+}
+
+.nav_container ul li::after {
+  content: "";
+  width: 0%;
+  height: 5px;
+  background-color: #ff6600;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 800ms ease;
+}
+
+.nav_container ul li.active::after {
+  width: 100%;
+}
+
+.nav_container.active ul li:hover::after {
+  width: 100%;
+}
+
+section {
+  height: 100vh;
+  font-size: 3rem;
+  border-bottom: 1px solid #ccc;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.black {
+  background-color: #1e1e24;
+}
+
+/* Scroll to Top Button Styles */
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 70px; /* Adjusted to start lower */
+  right: 20px;
+  display: none; /* Hidden by default */
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0; /* Start invisible */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Transition for opacity and transform */
+  transform: translateY(20px); /* Start 20px lower */
+}
+
+#scrollToTopBtn.show {
+  display: block; /* Show button */
+  opacity: 1; /* Fade in */
+  transform: translateY(0); /* Move to original position */
+}
+
+#scrollToTopBtn:hover {
+  background-color: #e55b00; /* Darker on hover */
+}
+.orange {
+  color: #ff6600;
+}
+.bg-orange {
+  background-color: #ff6600;
+}
+.bg-wrapper {
+  width: 170px;
+  height: 60px;
+  background-color: #ff6600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease-in-out;
+}
+.btn {
+  width: 170px;
+  height: 60px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* transition: transform 0.5s ease-in-out; */
+  transform: translate(5%, -20%);
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+}
+.btn:hover {
+  width: 170px;
+  height: 60px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* transition: transform 0.5s ease-in-out; */
+  transform: translate(12.5%, -30%);
+  cursor: pointer;
+}
+.exp_container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 120px;
+  padding: 120px;
+}
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 120px;
+}
+.circle {
+  background-color: orange;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: relative;
+}
+.circle::before,
+.circle::after {
+  content: "";
+  height: 200px;
+  width: 4px;
+  background-color: orange;
+  position: absolute;
+  left: 50%;
+}
+.circle::before {
+  top: -100%;
+}
+.circle::after {
+  bottom: -200%;
+}
+.exp {
+  height: 200px;
+  width: 400px;
+  border-radius: 8px;
+  position: absolute;
+  letter-spacing: -50%;
+  top: 90%;
+  right: -1100%;
+  transform: translate(-50%, -50%);
+  transition: background-color 0.3s ease, height 0.3s ease, padding 0.3s ease,
+    width 0.3s ease, top 0.3s ease;
+  cursor: pointer;
+}
+.exp1 {
+  background-color: black;
+  height: 200px;
+  width: 400px;
+  border-radius: 8px;
+  position: absolute;
+  letter-spacing: -50%;
+  top: 50%;
+  right: -1100%;
+  transform: translate(-50%, -50%);
+}
+.exp2:hover,
+.exp3:hover,
+.exp4:hover {
+  background-color: black;
+  height: 200px; /* You can change this if you want a different size on hover */
+  width: 400px; /* Same here */
+  top: 90%;
+  color: #fff;
+  padding: 2rem;
+}
+.item3 {
+  padding-bottom: 40px;
+}
+
+
+@media (max-width: 768px) {
+  .intro {
+    margin-top: 20px;
+    gap: .5rem;
+  }
+  .name{
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  .exp_container{
+    padding: 10px;
+  }
+  .exp{
+    background-color: black;
+    height: 200px;
+    width: 370px;
+    color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    position: absolute;
+    letter-spacing: -50%;
+    top: 50%;
+    left: 460%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+#skills {
+  padding: 50px 0;
+}
+.progress_bar {
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  background: #D9D9D9;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.bars {
+  background: #ff6600;
+  height: 10px;
+  width: 0; /* Start at 0 for animation */
+  transition: width 0.3s ease-in-out;
+}
