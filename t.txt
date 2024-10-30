@@ -157,13 +157,20 @@ body {
   .experience_container .left h2 {
     font-size: 10vw;
   }
-  .contact_container {
+  /* .contact_container {
     flex-direction: column;
-  }
+  } */
   .contact_container .left {
     width: 100%;
     font-size: 10vw;
   }
+}
+
+.experience_container .left h2 {
+  font-size: 5vw;
+}
+.contact_container .left h2{
+  font-size: 4vw;
 }
 
 @media (min-width: 1280px) and (max-width: 1480px) {
@@ -171,14 +178,12 @@ body {
     padding: 2px;
   }
   .experience_container {
-    flex-direction: column;
+    /* flex-direction: column; */
   }
   .experience_container .left h2 {
-    font-size: 10vw;
+    font-size: 5vw;
   }
-  .contact_container {
-    flex-direction: column;
-  }
+  
   .contact_container .left {
     width: 100%;
     font-size: 10vw;
